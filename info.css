@@ -1,0 +1,66 @@
+h2 ~ p	General Sibling Selector	Selects an element that follows anywhere after the prior element, in which both elements share the same parent
+h2 + p	Adjacent Sibling Selector	Selects an element that follows directly after the prior element, in which both elements share the same parent
+ 
+ article h2	Descendant Selector	Selects an element that resides anywhere within an identified ancestor element
+article > p	Direct Child Selector	Selects an element that resides immediately inside an identified parent element
+ 
+
+ a[target]	Attribute Present Selector	Selects an element if the given attribute is present
+a[href="http://google.com/"]	Attribute Equals Selector	Selects an element if the given attribute value exactly matches the value stated
+a[href*="login"]	Attribute Contains Selector	Selects an element if the given attribute value contains at least once instance of the value stated
+a[href^="https://"]	Attribute Begins With Selector	 Selects an element if the given attribute value begins with the value stated
+a[href$=".pdf"]	Attribute Begins With Selector	Selects an element if the given attribute value ends with the value stated
+a[rel~="tag"]	Attribute Spaced Selector	Selects an element if the given attribute value is whitespace-separated with one word being exactly as stated
+a[lang|="en"]	Attribute Hyphenated Selector	Selects an element if the given attribute value is hyphen-separated and begins with the word stated
+ 
+/////////////////
+ https://javascript.info/
+
+ ///////////////
+ https://platform.html5.org/
+ https://devresourc.es/
+
+ ///////////////
+ Try this
+const colors = [ red, green, blue]
+const button = document. querySelector(btn)
+button.addEventListener(click, function (colors) {
+let unique = Math.floor( Math.random() * colors.length)
+button.style.backgroundColor = ' ${colors[unique]' :
+})
+
+/////////////////
+const button = document.querySelector('.className or #Id')
+button.addEventListener('click', (color) => {    
+    color = button.style.backgroundColor 
+    if(color === 'blue') {
+        button.style.backgroundColor = 'red';}
+        else {
+            button.style.backgroundColor = 'blue'
+        }
+        }  
+        )
+
+
+///////////////
+Even more easy, you can just make the button's default colour blue and have a CSS class that changes 
+the colour to red example "red-bg". In your function, simply do button.classList.toggle("red-bg"). 
+If the class is applied on the element, automatically it would remove it and so it becomes blue and if
+ the class is not there, it would automatically add it and make it red. No need for you to write any 
+ if-else or return any boolean
+
+ button{
+     background-color: blue;
+ }
+ .red-bg{
+     background-color: red;
+ }
+
+/* html */
+ <button id="btn" class="red-bg">click</button>
+
+ /* js */
+ const button = document.querySelector("#btn")
+ button.addeventlistener('click',function(){
+    button.classList.toggle("red-bg")
+ })

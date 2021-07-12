@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Event Tutorial</title>
+    <style>
+        .main{
+            display: flex;
+        }
+        .positive{
+            color: green;
+        }
+        .negative{
+            color: red;
+        }
+        .plus{
+            font-size: 20px;
+            border: 1px solid black;
+            width: 20px;
+            text-align: center;
+            margin: 0px 5px;
+        }
+        .btn{
+            margin: 0px 10px;
+        }
+        .result{
+            border: 1px solid black;
+            width: 150px;
+            height: 50px;
+            margin-left: 40px;
+
+
+        }
+        .result-wrapper{
+            display: flex;
+            margin: 30px 70px;
+            font-size: 50px;
+        }
+        
+    </style>
+</head>
+<body>
+    <main class="main">
+        <input type="text" name="first-number" id="first">
+        <div class="plus">+</div>
+        <input type="text" name="second-number" id="second">
+        <button class="btn">Add</button>
+
+    </main>
+
+    <div class="result-wrapper">
+        <span>Result</span>
+        <div class="result"></div>
+    </div>
+
+<script>
+    //selecting using getElementById
+    const firstNumber = document.getElementById('first')
+    const secondNumber = document.getElementById('second')
+// or 
+    // let firstNumber = document.getElementById('first').value;
+    // let secondNumber = document.getElementById('second').value;
+
+    //selecting using querySelector
+    const main =document.querySelector('.main');
+    const addButton = document.querySelector('.btn');
+    const resultDiv = document.querySelector('.result');
+
+    //selecting using querySelectorAll
+    const numbers =document.querySelectorAll('input');
+
+    // adding addEventListeners 
+    addButton.addEventListener("click", () => {
+        const result = Number(firstNumber.value)+ Number(secondNumber.value)
+        resultDiv.innerHTML = result
+        // or 
+        resultDiv.innerHTML = `${firstNumber.value} + ${secondNumber.value} = ${result}`
+
+        if(result >= 0) {
+            resultDiv.className = 'positive'
+            resultDiv.style.fontSize = '50px'
+        }else{
+            resultDiv.className = 'negative'
+        }
+
+    })
+
+</script>    
+</body>
+</html>
