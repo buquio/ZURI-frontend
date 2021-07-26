@@ -18,21 +18,13 @@ var tip = document.getElementById('tip');
 var total = document.getElementById('total');
 
 var donation_amount = 0
-// value_1.innerHTML = 1000;
-// value_2.innerHTML = 2000;
-// value_3.innerHTML = 10000;
-// value_4.innerHTML = 50000;
 
-console.log(donation.innerHTML)
-console.log(donation.value)
+// console.log(donation.innerHTML)
+// console.log(donation.value)
 
 
 function amount(value_1) {
-    console.log(value_1)
-    // amount_input.value = value_1.innerHTML;
-    // donation.value = value_1.innerHTML;
-    // donation.value = value_1.value;
-    // donation.innerHTML = value_1.value;
+    // console.log(value_1)
     donation.innerHTML = value_1.innerHTML;
     donation_amount = parseFloat(value_1.innerHTML)
 }
