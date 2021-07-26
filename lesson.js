@@ -4,7 +4,6 @@
 
 // B.coverting objects-array back to Object using
 
-// CV -HTML & CSS
 const person = {
     name: "Mikali Rasheed",
     weight: 60,
